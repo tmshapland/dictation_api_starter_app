@@ -1,6 +1,6 @@
 # Voice Dictation Form
 
-A tiny, local, educational Flask app: a web form whose fields you fill in **by
+A tiny, local, educational web app. A web form whose fields you fill in **by
 voice**, using [AssemblyAI's Dictation API](https://www.assemblyai.com/docs/dictation).
 
 Press **🎤 Speak** next to a field, talk, press **■ Stop**, and the transcribed
@@ -36,7 +36,7 @@ Two things worth understanding:
    ```bash
    pip install -r requirements.txt
    ```
-2. Put your AssemblyAI API key in `.env` (already present in this folder):
+2. Put your AssemblyAI API key in `.env`.  
    ```
    ASSEMBLYAI_API_KEY=your_key_here
    ```
@@ -57,8 +57,3 @@ Two things worth understanding:
 | `app.py` | Flask server: serves the page and proxies audio to AssemblyAI. |
 | `templates/index.html` | The form. Fields are defined in one list near the top. |
 | `static/dictation.js` | Records the mic, encodes WAV, calls `/transcribe`. |
-
-## Changing the fields
-
-Edit the `FIELDS` list near the top of `templates/index.html` — each entry is an
-`(id, label)` pair. Add, remove, or rename fields there; everything else adapts.
